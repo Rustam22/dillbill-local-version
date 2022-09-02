@@ -1,0 +1,61 @@
+Options +FollowSymLinks
+
+IndexIgnore */*
+
+
+
+# ---------------------------------------- SEO PART BEGINS ---------------------------------------- #
+
+#   -------------    Index.HTML   -------------   #
+# https://dillbill.az/index.html  to  https://dillbill.az
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /index.html\ HTTP
+RewriteRule ^ /? [R=301,L]
+
+
+
+#   -------------    Only  Speaking -> Englishh Conversation   -------------   #
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /az/only-speaking\ HTTP
+RewriteRule ^ /english-conversation? [R=302,L]
+
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /only-speaking\ HTTP
+RewriteRule ^ /english-conversation? [R=302,L]
+
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /en/only-speaking\ HTTP
+RewriteRule ^ /english-conversation? [R=302,L]
+
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /ru/only-speaking\ HTTP
+RewriteRule ^ /english-conversation? [R=302,L]
+
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /tr/only-speaking\ HTTP
+RewriteRule ^ /english-conversation? [R=302,L]
+
+
+
+#   -------------    en-US   -------------   #
+# https://dillbill.az/en-US  to  https://dillbill.az/en
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /en-US\ HTTP
+RewriteRule ^ /en? [R=301,L]
+
+#   -------------    (az,en,ru)?language=(az,en,ru)   -------------   #
+# https://dillbill.az/en?language=(az,en,ru)  to  https://dillbill.az/en
+RewriteCond %{THE_REQUEST} ^(GET|POST)\ /(.*)?language=(.*)\ HTTP
+RewriteRule ^ /%2 [R=301,L]
+
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ https://dillbill.com/$1 [L,R=301]
+
+# ---------------------------------------- SEO PART ENDS ---------------------------------------- #
+
+
+
+
+
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php

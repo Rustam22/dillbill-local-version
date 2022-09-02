@@ -1,0 +1,123 @@
+.neo-navbar {
+    margin-left: 236px;
+    height: 68px;
+    padding:  0 12px;
+    background-color: white;
+    border-bottom: 1px solid #E0E2E7;
+    z-index: 99;
+}
+.neo-navbar .navbar-brand {
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+}
+.profile-avatar {
+    height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 17px;
+    border-radius: 50%;
+    font-weight: 500;
+    padding: 7px;
+}
+.subscribe-button {
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #1877F2;
+    padding: 0 13px 2px;
+}
+.subscribe-button:hover {
+    color: white;
+}
+.vertical-border {
+    border-left: 1px solid #E0E2E7;
+    margin: 0 18px;
+}
+.profile-dropdown {
+    top: 55px !important;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #D8DAE5;
+    box-shadow: 0 4px 8px rgba(16, 24, 64, 0.16);
+    width: 256px;
+}
+.user-balance b {
+    font-weight: 400;
+    color: black;
+}
+.user-balance span {
+    font-weight: 300;
+    color: #757575;
+}
+.user-initials {
+    padding: 7px 16px;
+}
+.user-settings {
+    padding: 10px 16px;
+}
+.user-settings a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 400;
+}
+.user-settings p {
+    margin: 0 0 12px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+.user-settings p:hover {
+    background-color: rgba(128, 128, 128, 0.09);
+}
+.user-settings p svg {
+    margin-right: 5px;
+}
+.privacy-terms {
+    padding: 10px 16px;
+}
+.privacy-terms a, .privacy-terms span {
+    color: #646E82;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.privacy-terms a:hover {
+    text-decoration: underline;
+}
+.cut-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 175px;
+    white-space: nowrap;
+}
+
+/*--------------- Mobile ---------------*/
+@media (max-width: 767px) {    /*___ grid, md>= 768px ___*/
+    .neo-navbar {
+        margin-left: 0 !important;
+        position: fixed;
+        width: 100% !important;
+    }
+    .neo-navbar {
+        padding: 0 !important;
+    }
+    .desktop-active-menu {
+        display: none !important;
+    }
+    .mobile-hamburger {
+        display: flex !important;
+    }
+    .subscribe-button svg {
+        display: none !important;
+    }
+    .vertical-border {
+        margin: 0 15px !important;
+    }
+    .cd-popup-container {
+        margin: 1em auto !important;
+    }
+}

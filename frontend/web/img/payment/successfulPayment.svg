@@ -1,0 +1,9 @@
+<svg id="Iconly_Light_Tick_Square" data-name="Iconly/Light/Tick Square" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <g id="Tick_Square" data-name="Tick Square">
+    <path id="Stroke_3" data-name="Stroke 3" d="M0,8.338l8.341,8.338L25.016,0" transform="translate(19.615 24.791)" fill="none" stroke="#10ce73" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    <g id="Ellipse_91" data-name="Ellipse 91" fill="none" stroke="#10ce73" stroke-width="2">
+      <ellipse cx="32.375" cy="32.5" rx="32.375" ry="32.5" stroke="none"/>
+      <ellipse cx="32.375" cy="32.5" rx="31.375" ry="31.5" fill="none"/>
+    </g>
+  </g>
+</svg>
